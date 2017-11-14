@@ -1,0 +1,44 @@
+
+for hover, be able to tween shadow depth
+
+idea: I can use multiple canvases to paint a canvas scenegraph
+   draw canvas image onto image
+
+implement image drawing
+implement flow & inherit
+implement change panel
+   requires proxy implementation
+work on flow extent
+implement drawing
+improve card shadow
+implement clipping
+   for ripples in circular
+pixel based hit test
+
+issues with flicker when switching among panels
+   but do not see the issue with the miller panel demo
+
+ripple may need pointer-events
+   to be able to work without invoke
+
+with this element/canvas strategy, which effects will absolutely require CSS?
+   translate, rotate, scale, blur, etc
+   
+test alpha
+
+my entity API needs methods for translate, rotate, etc.
+
+backdrop canvases must have a transparent background
+
+issue: if I do fixed positioning everywhere, won't be able to scroll or overflow automatically
+
+want to add translate/pivot to Entity
+   
+   var translate = entity.translate();
+   var x = entity.translate().x;
+   entity.translate({
+      x : 0,
+      y : 0
+   });
+   
+   then later on I can use a proxy to listen to entity.translate changes

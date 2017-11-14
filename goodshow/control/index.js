@@ -1,0 +1,2 @@
+
+goodshow.control = {};
